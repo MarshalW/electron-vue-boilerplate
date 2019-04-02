@@ -35,7 +35,7 @@ npm run package
 构建可分发包：
 
 ```
-npm run makeƒ
+npm run make
 ```
 
 ## 版本历史
