@@ -18,7 +18,11 @@ electron vue 样板项目。
 git clone https://github.com/MarshalW/electron-vue-boilerplate.git your-project-name
 ```
 
-修改项目名称/目录名称。
+安装依赖包：
+
+```
+npm i
+```
 
 启动开发环境：
 
