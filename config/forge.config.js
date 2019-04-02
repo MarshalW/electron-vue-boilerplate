@@ -1,12 +1,18 @@
 const copyNodeModules = require("copy-node-modules");
+const globby = require("globby");
 const srcDir = "./";
-const dstDir =
-  "./out/electron-vue-boilerplate-darwin-x64/electron-vue-boilerplate.app/Contents/Resources/app";
-//TODO 自动化
 
 module.exports = {
   hooks: {
     postPackage: async () => {
+      const paths = await globby(["./out/**/app/package.json"]);
+      let dstDir = null;
+
+      // 根据app/package.json定位package的目录
+      paths.forEach(name => {
+        dstDir = name.substring(0, name.length - "package.json".length);
+      });
+
       await (function() {
         return new Promise((resolve, reject) => {
           copyNodeModules(
