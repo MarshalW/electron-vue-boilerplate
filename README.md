@@ -26,7 +26,7 @@ git clone https://github.com/MarshalW/electron-vue-boilerplate.git
 npm start
 ```
 
-打包生成app目录：
+打包生成 app 目录：
 
 ```
 npm run package
